@@ -136,6 +136,8 @@ try:
             avg_cpu_temp = sum(cpu_temps) / float(len(cpu_temps))
             raw_temp = bme280.get_temperature()
             data = raw_temp - ((avg_cpu_temp - raw_temp) / factor)
+            #convert data to farhenheit
+            data = (data * 1.8) + 32
             display_text(variables[mode], data, unit)
 
         if mode == 1:
