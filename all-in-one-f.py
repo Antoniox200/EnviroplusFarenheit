@@ -129,7 +129,7 @@ try:
         # One mode for each variable
         if mode == 0:
             # variable = "temperature"
-            unit = "C"
+            unit = "F"
             cpu_temp = get_cpu_temperature()
             # Smooth out with some averaging to decrease jitter
             cpu_temps = cpu_temps[1:] + [cpu_temp]
